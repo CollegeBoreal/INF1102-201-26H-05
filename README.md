@@ -37,7 +37,7 @@ INF1102 (201) - Programmation de systèmes
 Le déroulement peut être modifié au besoin. La personne étudiante sera avisée.
 
 | Période | Sem | Activités / Thèmes | Ressources/module |  Résultat d’apprentissage visé |
-|-|-|-|-|-|
+|-|-:|-|-|-|
 | 12-Jan | 1️⃣ |
 | 19-Jan | 2️⃣ |
 | 26-Jan | 3️⃣ |
