@@ -44,15 +44,15 @@ Le déroulement peut être modifié au besoin. La personne étudiante sera avis�
 | 02-Feb | 4️⃣ |
 | 09-Feb | 5️⃣ |
 | 16-Feb | 6️⃣ |
-| 23-Feb | 📚 |
-| 02-Mar
-| 09-Mar
-| 16-Mar
-| 23-Mar
-| 30-Mar
-| 06-Apr
-| 13-Apr
-| 20-Apr
+| 23-Feb | 7️⃣ |
+| 02-Mar | 📚 |
+| 09-Mar | 8️⃣ |
+| 16-Mar | 9️⃣ |
+| 23-Mar | 1️⃣0️⃣ |
+| 30-Mar | 1️⃣1️⃣ |
+| 06-Apr | 1️⃣2️⃣ |
+| 13-Apr | 1️⃣3️⃣ |
+| 20-Apr | 1️⃣4️⃣ |
 
 
 
