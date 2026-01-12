@@ -50,7 +50,7 @@ $IDS = @(
 # GitHub avatars correspondants
 $AVATARS = @(
     133056385    # 300135538 → 2e liste
-    205994773    # 300146112 → pas trouvé exact, utiliser placeholder
+    205994703    # 300146112
     211595997    # 300146676 → 1ere liste
     212054634    # 300148094 → 1ere liste
     207268490    # 300150268 → 2e liste
