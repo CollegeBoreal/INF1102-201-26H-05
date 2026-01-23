@@ -4,18 +4,29 @@
 ```mermaid
 block-beta
 columns 1
-  db(("DB"))
-  blockArrowId6<["&nbsp;&nbsp;&nbsp;"]>(down)
-  block:ID
-    A
-    B["A wide one in the middle"]
-    C
+
+  Kernel["Noyau\nLinux / Windows"]
+
+  blockArrowKS<[" "]>(down)
+
+  block:ShellBlock
+    Shell["Shell\nbash / PowerShell"]
   end
-  space
-  D
-  ID --> D
-  C --> D
-  style B fill:#969,stroke:#333,stroke-width:4px
+
+  blockArrowSS<[" "]>(down)
+
+  block:Services
+    Web["Serveur Web\nApache / Nginx / IIS"]
+    DNS["DNS"]
+    AD["Active Directory"]
+    Apps["Applications"]
+    Files["Serveur de fichiers"]
+    DB["Base de donnees"]
+  end
+
+  style Kernel fill:#444,stroke:#222,stroke-width:2px,color:#fff
+  style Shell fill:#2b7,stroke:#333,stroke-width:2px
+  style Services fill:#eef,stroke:#333,stroke-width:2px
 ```
 
 ## 1. Introduction
