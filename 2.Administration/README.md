@@ -3,19 +3,17 @@
 
 ```mermaid
 block-beta
-columns 1
+columns 2
 
-  Kernel["Noyau\nLinux / Windows"]
-
-  blockArrowKS<[" "]>(down)
-
-  block:ShellBlock
+  %% Colonne de gauche : Kernel et Shell
+  block:Left
+    Kernel["Noyau\nLinux / Windows"]
+    blockArrowKS<[" "]>(down)
     Shell["Shell\nbash / PowerShell"]
   end
 
-  blockArrowSS<[" "]>(down)
-
-  block:Services
+  %% Colonne de droite : Services
+  block:Right
     Web["Serveur Web\nApache / Nginx / IIS"]
     DNS["DNS"]
     AD["Active Directory"]
@@ -24,9 +22,18 @@ columns 1
     DB["Base de donnees"]
   end
 
+  %% Connexions
+  Shell --> Web
+  Shell --> DNS
+  Shell --> AD
+  Shell --> Apps
+  Shell --> Files
+  Shell --> DB
+
+  %% Styles
   style Kernel fill:#444,stroke:#222,stroke-width:2px,color:#fff
   style Shell fill:#2b7,stroke:#333,stroke-width:2px
-  style Services fill:#eef,stroke:#333,stroke-width:2px
+  style Right fill:#eef,stroke:#333,stroke-width:2px
 ```
 
 ## 1. Introduction
