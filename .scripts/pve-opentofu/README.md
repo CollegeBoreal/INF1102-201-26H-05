@@ -397,3 +397,11 @@ proxmox_vm_qemu.vm1: Creation complete after 10m36s [id=labinfo/qemu/100]
 
 Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 ```
+
+
+```lua
+ssh -i ~/.ssh/b300098957@ramena \
+  -o StrictHostKeyChecking=no \
+  -o UserKnownHostsFile=/tmp/ssh_known_hosts_empty \
+  ubuntu@10.7.237.193
+```

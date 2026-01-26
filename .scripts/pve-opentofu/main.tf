@@ -1,5 +1,5 @@
 resource "proxmox_vm_qemu" "vm1" {
-  name        = "tofu-vm01"
+  name        = "vm098957"
   target_node = "labinfo"
   clone       = "ubuntu-jammy-template"
 
