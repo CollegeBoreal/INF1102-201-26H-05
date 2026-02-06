@@ -211,3 +211,5 @@ __marimo__/
 *.tfstate.backup
 .terraform/
 terraform.tfvars
+!3.IaC/300152410/
+!3.IaC/300152410/**
