@@ -76,38 +76,38 @@ Tu verras exactement ce qui tourne et ce qui est activé au démarrage.
 
 ```mermaid
 flowchart LR
-    subgraph Cluster & Core
+    subgraph Cluster_and_Core
         A[pve-cluster] --> B[pvedaemon]
         A --> C[pveproxy]
         A --> D[pvestatd]
     end
 
-    subgraph GUI & Console
-        C --> E[Web Interface (HTTPS :8006)]
-        E --> F[noVNC / SPICE]
-        F --> G[VMs / Containers]
+    subgraph GUI_and_Console
+        C --> E["Web Interface HTTPS 8006"]
+        E --> F[noVNC_SPICE]
+        F --> G[VMs_and_Containers]
     end
 
     subgraph Virtualization
         B --> G
         H[pve-qemu-kvm] --> G
-        I[pve-container / lxc-pve] --> G
+        I[pve-container_lxc-pve] --> G
     end
 
-    subgraph HA & Resources
+    subgraph HA_and_Resources
         J[pve-ha-lrm] --> K[pve-ha-crm]
         K --> B
         K --> H
         K --> I
     end
 
-    subgraph Security & Network
+    subgraph Security_and_Network
         L[pve-firewall] --> C
         L --> B
-        M[Certificats SSL / ACME] --> C
+        M[SSL_ACME] --> C
     end
 
-    subgraph Monitoring & Utilities
+    subgraph Monitoring_and_Utilities
         D --> G
         N[ksm-control-daemon] --> G
         O[pve-mini-journalreader] --> B
