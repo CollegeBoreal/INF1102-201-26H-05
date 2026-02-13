@@ -69,8 +69,8 @@ Write-Output ""
 # Présence table
 Write-Output "## :a: Présence"
 Write-Output ""
-Write-Output "|:hash:| Boréal :id:                | README.md | images | main.tf | VM |"
-Write-Output "|------|----------------------------|-----------|--------|---------|----|"
+Write-Output "|:hash:| Boréal :id:                | README.md | images | main.tf | VM | SSH |"
+Write-Output "|------|----------------------------|-----------|--------|---------|----|-----|"
 
 # -------------------------------
 # Initialisation
@@ -112,7 +112,30 @@ for ($g = 0; $g -lt $ACTIVE_GROUP.Count; $g++) {
 
     # Vérification VM
     if ($VM_STATUS.ContainsKey($StudentID)) {
-        $VM = if ($VM_STATUS[$StudentID] -eq "running") { ":green_circle: [${ServerID}](http://${ServerID})" } else { ":orange_circle:" }
+        if ($VM_STATUS[$StudentID] -eq "running") {
+            $VM = ":green_circle: [${ServerID}](http://${ServerID})" 
+            
+            # ------------- SSH Test -------------
+            $SSH_TEST = ssh `
+                -o ConnectTimeout=5 `
+                -o BatchMode=yes `
+                -o StrictHostKeyChecking=no `
+                -i ~/.ssh/${PK_PROF} `
+                ubuntu@${ServerID} "echo ok" 2>$null
+
+            if ($LASTEXITCODE -eq 0) {
+                $SSH = ":link:"
+                $ssh_ok_count++
+            }
+            else {
+                $SSH = ":x:"
+            }
+        }
+        else {
+            $VM  = ":orange_circle:"
+            $SSH = ":x:"
+        }
+
     } else {
         $VM = ":x:"
     }
@@ -126,7 +149,7 @@ for ($g = 0; $g -lt $ACTIVE_GROUP.Count; $g++) {
     if ($README_OK -eq ":heavy_check_mark:" -and $IMAGES_OK -eq ":heavy_check_mark:") { $s++ }
 
     # Affichage de la ligne
-    Write-Output "| $i | [$StudentID](../$FILE) :point_right: $URL | $README_OK | $IMAGES_OK | $TF_OK | $VM |"
+    Write-Output "| $i | [$StudentID](../$FILE) :point_right: $URL | $README_OK | $IMAGES_OK | $TF_OK | $VM | $SSH |"
 
     $i++
 }
