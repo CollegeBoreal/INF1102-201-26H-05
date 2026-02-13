@@ -85,7 +85,7 @@ for ($g = 0; $g -lt $ACTIVE_GROUP.Count; $g++) {
     $URL = "[<image src='https://avatars0.githubusercontent.com/u/{1}?s=460&v=4' width=20 height=20></image>](https://github.com/{0})" -f $GitHubID, $AvatarID
     $FILE = "$StudentID/README.md"
     $FOLDER = "$StudentID/images"
-    $TF_FILE = "$StudentID/main.tf"
+    $TF_FILE = "$StudentID/scruter_nginx.sh"
 
 
     $OK = "| $i | [$StudentID](../$FILE) $URL | :heavy_check_mark: | :x: | :x: | ${ServerID} |"
