@@ -72,3 +72,44 @@ systemctl list-units --type=service | grep -E 'pve|proxmox|corosync|ksm|novnc|sp
 
 Tu verras exactement ce qui tourne et ce qui est activé au démarrage.
 
+## Graphe
+
+```mermaid
+flowchart LR
+    subgraph Cluster & Core
+        A[pve-cluster] --> B[pvedaemon]
+        A --> C[pveproxy]
+        A --> D[pvestatd]
+    end
+
+    subgraph GUI & Console
+        C --> E[Web Interface (HTTPS :8006)]
+        E --> F[noVNC / SPICE]
+        F --> G[VMs / Containers]
+    end
+
+    subgraph Virtualization
+        B --> G
+        H[pve-qemu-kvm] --> G
+        I[pve-container / lxc-pve] --> G
+    end
+
+    subgraph HA & Resources
+        J[pve-ha-lrm] --> K[pve-ha-crm]
+        K --> B
+        K --> H
+        K --> I
+    end
+
+    subgraph Security & Network
+        L[pve-firewall] --> C
+        L --> B
+        M[Certificats SSL / ACME] --> C
+    end
+
+    subgraph Monitoring & Utilities
+        D --> G
+        N[ksm-control-daemon] --> G
+        O[pve-mini-journalreader] --> B
+    end
+```
