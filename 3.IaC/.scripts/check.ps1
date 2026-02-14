@@ -111,6 +111,8 @@ for ($g = 0; $g -lt $ACTIVE_GROUP.Count; $g++) {
     $TF_FILE = "$StudentID/main.tf"
 
     # Vérification VM
+    $VM = ":x:"
+    $SSH = ":x:"
     if ($VM_STATUS.ContainsKey($StudentID)) {
         if ($VM_STATUS[$StudentID] -eq "running") {
             $VM = ":green_circle: [${ServerID}](http://${ServerID})" 
@@ -127,17 +129,11 @@ for ($g = 0; $g -lt $ACTIVE_GROUP.Count; $g++) {
                 $SSH = ":link:"
                 $ssh_ok_count++
             }
-            else {
-                $SSH = ":x:"
-            }
         }
         else {
             $VM  = ":orange_circle:"
-            $SSH = ":x:"
         }
 
-    } else {
-        $VM = ":x:"
     }
 
     # Vérification fichiers
