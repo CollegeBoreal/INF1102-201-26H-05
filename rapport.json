@@ -1,0 +1,66 @@
+{
+  "Date": "2026-03-27T14:26:12.3449676-04:00",
+  "Utilisateur": "aymen",
+  "Machine": "DESKTOP-09JTHK7",
+  "TopCPU": [
+    {
+      "CPU": 3.878258,
+      "Process": "pwsh"
+    },
+    {
+      "CPU": 1.75,
+      "Process": "systemd"
+    },
+    {
+      "CPU": 0.51,
+      "Process": "systemd-journald"
+    },
+    {
+      "CPU": 0.28,
+      "Process": "unattended-upgrade-shutdown"
+    },
+    {
+      "CPU": 0.26,
+      "Process": "systemd-udevd"
+    }
+  ],
+  "TopMemory": [
+    {
+      "Memory": 118915072,
+      "Process": "pwsh"
+    },
+    {
+      "Memory": 22806528,
+      "Process": "unattended-upgrade-shutdown"
+    },
+    {
+      "Memory": 15630336,
+      "Process": "systemd-journald"
+    },
+    {
+      "Memory": 12976128,
+      "Process": "systemd-resolved"
+    },
+    {
+      "Memory": 12926976,
+      "Process": "systemd"
+    }
+  ],
+  "Disk": [
+    "Filesystem      Size  Used Avail Use% Mounted on",
+    "none            3.9G     0  3.9G   0% /usr/lib/modules/6.6.87.2-microsoft-standard-WSL2",
+    "none            3.9G  4.0K  3.9G   1% /mnt/wsl",
+    "drivers         238G  202G   37G  85% /usr/lib/wsl/drivers",
+    "/dev/sdd       1007G  2.3G  954G   1% /",
+    "none            3.9G   72K  3.9G   1% /mnt/wslg",
+    "none            3.9G     0  3.9G   0% /usr/lib/wsl/lib",
+    "rootfs          3.9G  2.7M  3.9G   1% /init",
+    "none            3.9G  484K  3.9G   1% /run",
+    "none            3.9G     0  3.9G   0% /run/lock",
+    "none            3.9G     0  3.9G   0% /run/shm",
+    "none            3.9G   76K  3.9G   1% /mnt/wslg/versions.txt",
+    "none            3.9G   76K  3.9G   1% /mnt/wslg/doc",
+    "C:\\             238G  202G   37G  85% /mnt/c",
+    "tmpfs           788M   20K  788M   1% /run/user/1000"
+  ]
+}

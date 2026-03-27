@@ -1,0 +1,38 @@
+===== RAPPORT DEVOPS =====
+Date : 03/27/2026 14:26:12
+Utilisateur : aymen
+Machine : DESKTOP-09JTHK7
+
+Top 5 processus par CPU :
+pwsh - CPU: 3.750859
+systemd - CPU: 1.75
+systemd-journald - CPU: 0.51
+unattended-upgrade-shutdown - CPU: 0.28
+systemd-udevd - CPU: 0.26
+
+Top 5 processus par mémoire :
+pwsh - Mémoire: 118915072
+unattended-upgrade-shutdown - Mémoire: 22806528
+systemd-journald - Mémoire: 15630336
+systemd-resolved - Mémoire: 12976128
+systemd - Mémoire: 12926976
+
+Espace disque :
+Filesystem      Size  Used Avail Use% Mounted on
+none            3.9G     0  3.9G   0% /usr/lib/modules/6.6.87.2-microsoft-standard-WSL2
+none            3.9G  4.0K  3.9G   1% /mnt/wsl
+drivers         238G  202G   37G  85% /usr/lib/wsl/drivers
+/dev/sdd       1007G  2.3G  954G   1% /
+none            3.9G   72K  3.9G   1% /mnt/wslg
+none            3.9G     0  3.9G   0% /usr/lib/wsl/lib
+rootfs          3.9G  2.7M  3.9G   1% /init
+none            3.9G  484K  3.9G   1% /run
+none            3.9G     0  3.9G   0% /run/lock
+none            3.9G     0  3.9G   0% /run/shm
+none            3.9G   76K  3.9G   1% /mnt/wslg/versions.txt
+none            3.9G   76K  3.9G   1% /mnt/wslg/doc
+C:\             238G  202G   37G  85% /mnt/c
+tmpfs           788M   20K  788M   1% /run/user/1000
+
+Test SSH vers 127.0.0.1 :
+Résultat : ssh: connect to host 127.0.0.1 port 22: Connection refused
